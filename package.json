@@ -1,0 +1,33 @@
+{
+  "name": "nestjs-graphql-auth0",
+  "version": "1.0.0",
+  "repository": "https://github.com/perevezencev/nestjs-graphql-auth0.git",
+  "author": "Pavel Perevezentsev <perevezenzev@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepublish": "npm run build",
+    "publish": "npm publish --access public",
+    "test": "echo 'No tests implemented yet.'"
+  },
+  "dependencies": {
+    "@nestjs/passport": "^6.1.1",
+    "jwks-rsa": "^1.6.2",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^6.11.5",
+    "@nestjs/graphql": "^6.5.3",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.4"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^6.11.5",
+    "@nestjs/graphql": "^6.5.3",
+    "@types/passport-jwt": "^3.0.3",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.4",
+    "typescript": "^3.7.5"
+  }
+}
