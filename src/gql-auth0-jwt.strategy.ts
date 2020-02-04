@@ -7,7 +7,7 @@ import { GqlAuth0ModuleOptions } from './interfaces'
 
 @Injectable()
 export class GqlAuth0JwtStrategy extends PassportStrategy(Strategy) {
-  constructor(@Inject('OPTIONS') options: GqlAuth0ModuleOptions) {
+  constructor(@Inject('GRAPHQL_AUTH0_MODULE_OPTIONS') options: GqlAuth0ModuleOptions) {
     super({
       secretOrKeyProvider: passportJwtSecret({
         cache: true,
