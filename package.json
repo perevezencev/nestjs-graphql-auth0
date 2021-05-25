@@ -1,33 +1,68 @@
 {
   "name": "nestjs-graphql-auth0",
-  "version": "1.1.0",
+  "version": "1.1.1",
+  "license": "MIT",
   "repository": "https://github.com/perevezencev/nestjs-graphql-auth0.git",
   "author": "Pavel Perevezentsev <perevezenzev@gmail.com>",
-  "license": "MIT",
+  "module": "./dist/nestjs-graphql-auth0.esm.js",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "prepublish": "npm run build",
-    "publish": "npm publish --access public",
-    "test": "echo 'No tests implemented yet.'"
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
   },
   "dependencies": {
-    "@nestjs/passport": "^6.1.1",
-    "jwks-rsa": "^1.6.2",
+    "@nestjs/common": "^7.6.17",
+    "@nestjs/graphql": "^7.10.6",
+    "@nestjs/passport": "^7.1.5",
+    "jwks-rsa": "^2.0.3",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0"
   },
   "peerDependencies": {
-    "@nestjs/common": "^6.11.5",
-    "@nestjs/graphql": "^6.5.3",
-    "reflect-metadata": "^0.1.13",
-    "rxjs": "^6.5.4"
+    "reflect-metadata": "0.1.13",
+    "rxjs": "6.6.3"
   },
   "devDependencies": {
-    "@nestjs/common": "^6.11.5",
-    "@nestjs/graphql": "^6.5.3",
-    "@types/passport-jwt": "^3.0.3",
-    "reflect-metadata": "^0.1.13",
-    "rxjs": "^6.5.4",
-    "typescript": "^3.7.5"
-  }
+    "@size-limit/preset-small-lib": "^4.11.0",
+    "@types/passport-jwt": "^3.0.5",
+    "husky": "^6.0.0",
+    "size-limit": "^4.11.0",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.2.0",
+    "typescript": "^4.2.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "size-limit": [
+    {
+      "path": "dist/nestjs-graphql-auth0.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/nestjs-graphql-auth0.esm.js",
+      "limit": "10 KB"
+    }
+  ]
 }
