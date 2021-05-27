@@ -1,6 +1,6 @@
 {
   "name": "nestjs-graphql-auth0",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "license": "MIT",
   "repository": "https://github.com/perevezencev/nestjs-graphql-auth0.git",
   "author": "Pavel Perevezentsev <perevezenzev@gmail.com>",
@@ -15,11 +15,8 @@
     "node": ">=10"
   },
   "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "tsdx test",
-    "lint": "tsdx lint",
-    "prepare": "tsdx build",
+    "build": "tsc",
+    "prepare": "tsc",
     "size": "size-limit",
     "analyze": "size-limit --why"
   },
@@ -27,8 +24,7 @@
     "@nestjs/passport": "^7.1.5",
     "jwks-rsa": "^2.0.3",
     "passport": "^0.4.1",
-    "passport-jwt": "^4.0.0",
-    "tslib": "^2.2.0"
+    "passport-jwt": "^4.0.0"
   },
   "peerDependencies": {
     "@nestjs/common": ">=7",
@@ -43,7 +39,6 @@
     "@types/passport-jwt": "^3.0.5",
     "husky": "^6.0.0",
     "size-limit": "^4.11.0",
-    "tsdx": "^0.14.1",
     "typescript": "^4.2.4"
   },
   "husky": {
