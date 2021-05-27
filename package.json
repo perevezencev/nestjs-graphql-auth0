@@ -1,6 +1,6 @@
 {
   "name": "nestjs-graphql-auth0",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "license": "MIT",
   "repository": "https://github.com/perevezencev/nestjs-graphql-auth0.git",
   "author": "Pavel Perevezentsev <perevezenzev@gmail.com>",
